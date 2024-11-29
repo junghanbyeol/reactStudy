@@ -1,12 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { useState, useEffect } from "react";
-import ToDo from "./ToDo.js";
+import Home from "./routes/Home.js";
+import Detail from "./routes/Detail.js";
+
 function App() {
   return (
-    <ToDo />
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movie" element={<Detail />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
-
-
