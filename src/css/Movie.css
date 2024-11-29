@@ -1,0 +1,77 @@
+/* Movie Card 전체 컨테이너 스타일 */
+.movie-card {
+  flex: 0 0 auto;
+  width: 300px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* 이미지 스타일 */
+.movie-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* 카드 내부 콘텐츠 */
+.movie-content {
+  padding: 15px;
+  text-align: center;
+}
+
+/* 제목 스타일 */
+.movie-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+.movie-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.movie-title a:hover {
+  color: #007bff;
+}
+
+/* 요약문 스타일 */
+.movie-summary {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 10px 0;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;      /* 유연한 박스 모델 사용 */
+  -webkit-box-orient: vertical; /* 세로 방향 박스 */
+  -webkit-line-clamp: 3;     /* 최대 줄 수 설정 (여기서는 2줄) */
+}
+
+
+/* 장르 리스트 스타일 */
+.movie-genres {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.genre-item {
+  background: #f0f0f0;
+  color: #333;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 20px;
+}

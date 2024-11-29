@@ -1,0 +1,42 @@
+/* Home.js 슬라이더 스타일 */
+.home-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .home-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .loading {
+    font-size: 1.5rem;
+    color: #888;
+  }
+  
+  /* 슬라이더 컨테이너 */
+  .movie-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px;
+    scroll-behavior: smooth;
+  }
+  
+  .movie-slider::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+  .movie-slider::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+  }
+  
+  .movie-slider::-webkit-scrollbar-track {
+    background: #f0f0f0;
+  }
+  
