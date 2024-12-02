@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Slider 컨테이너 스타일 */
+.movie-slider-container {
+    width: 100%;
+    overflow-x: scroll; /* 수평 스크롤 활성화 */
+    display: flex;
+    justify-content: center;
+    scroll-snap-type: x mandatory; /* Snap 스크롤 활성화 */
+    padding: 20px 0;
+  }
+  
+  /* Slider 내부 아이템 스타일 */
+  .movie-slider {
+    display: flex;
+    gap: 2rem; /* 카드 간격 */
+  }
+  
+  .movie-slider > div {
+    scroll-snap-align: center; /* Snap 중앙 정렬 */
+    flex: 0 0 auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .movie-slider > div:hover {
+    transform: scale(1.1); /* Hover 시 확대 효과 */
+  }
+  
+  /* 카드 이미지 */
+  .movie-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* 스크롤바 숨김 */
+  .movie-slider-container::-webkit-scrollbar {
+    display: none;
+  }
+  

@@ -1,19 +1,24 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import "../css/Movie.css"; // Movie용 CSS import
 
 function Movie({ id, coverImg, title, summary, genres }) {
   return (
-    <div className="movie-card">
-      <img className="movie-image" src={coverImg} alt={title} />
-      <div className="movie-content">
-        <h2 className="movie-title">
-          <Link to={`/movie/${id}`}>{title}</Link>
+    <div className="bg-gray-800 text-white rounded-lg shadow-lg w-72">
+      <img
+        className="w-full h-96 object-cover rounded-t-lg"
+        src={coverImg}
+        alt={title}
+      />
+      <div className="p-4">
+        <h2 className="text-lg font-bold mb-2">
+          <Link to={`/movie/${id}`} className="hover:text-red-400">
+            {title}
+          </Link>
         </h2>
-        <p className="movie-summary">{summary}</p>
-        <ul className="movie-genres">
+        <p className="text-sm text-gray-400 line-clamp-3">{summary}</p>
+        <ul className="flex flex-wrap gap-2 mt-3">
           {genres?.map((g) => (
-            <li key={g} className="genre-item">
+            <li key={g} className="bg-gray-700 px-2 py-1 rounded-full text-xs">
               {g}
             </li>
           ))}
@@ -30,4 +35,5 @@ Movie.propTypes = {
   summary: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
+
 export default Movie;
